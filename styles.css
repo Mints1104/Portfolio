@@ -7,6 +7,7 @@
     --color-surface: #f8f9fa;
     --color-border: rgba(0, 0, 0, 0.1);
     
+    /* Spacing (Margins/Paddings) */
     --spacing-small: 1rem;
     --spacing-medium: 2rem;
     --spacing-large: 5rem;
@@ -17,23 +18,19 @@
     --font-size-xlarge: 3rem;
     
     /* Effects */
-    --shadow-small: 0 2px 4px var(--color-border);
-    --transition-speed: 0.3s;
+    --shadow-small: 0 2px 4px var(--color-border); /* Light shadow for depth */
+    --transition-speed: 0.3s; /* Smooth transition speed for hover effects */
 }
 
-html {
-    scroll-behavior: smooth; 
-}
-
-/* CSS Reset and Global Styles */
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures consistent box-sizing for all elements */
 }
 
 html {
-    scroll-behavior: smooth; /* For smooth scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling between anchor links */
 }
 
 body {
@@ -43,198 +40,199 @@ body {
     background-color: var(--color-background);  
 }
 
-/* Navigation Bar Styles */
+/* Navigation Bar */
 .navbar {
-    position: fixed;
+    position: fixed; /* Keeps navbar fixed at the top of the page */
     width: 100%;
-    background-color: var(--color-background);  
-    box-shadow: var(--shadow-small);  
-    z-index: 1000;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-small); /* Adds a shadow under the navbar */
+    z-index: 1000; /* Ensures navbar is above other content when scrolling */
 }
 
 .nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Restricts the width of content inside navbar */
+    margin: 0 auto; /* Centers the navbar content */
     padding: var(--spacing-small) var(--spacing-medium);  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out the content in navbar */
+    align-items: center; /* Vertically centers the content */
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: var(--spacing-medium);  
+    display: flex; /* Horizontal layout for nav links */
+    list-style: none; /* Removes default list styles */
+    gap: var(--spacing-medium);  /* Adds space between each link */
 }
 
 .nav-links a {
-    text-decoration: none;
+    text-decoration: none; /* Removes underline from links */
     color: var(--color-text);  
-    transition: color var(--transition-speed);  
+    transition: color var(--transition-speed);  /* Smooth color change on hover */
 }
 
 .nav-links a:hover {
-    color: var(--color-primary);  
+    color: var(--color-primary);  /* Changes color on hover */
 }
 
 .nav-links a.active {
-    color: var(--color-primary);
+    color: var(--color-primary); /* Active link color */
     position: relative;
 }
 
 .nav-links a.active::after {
-    content: '';
+    content: ''; /* Creates a pseudo-element for the active link */
     position: absolute;
     bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--color-primary);
-    transition: width var(--transition-speed);
+    background-color: var(--color-primary); /* Underline effect for active link */
+    transition: width var(--transition-speed); /* Smooth transition for the underline */
 }
 
 /* Project Cards */
 .project-card {
     background-color: var(--color-background);
-    border-radius: 8px;
-    overflow: hidden; /* Keeps child elements within border radius */
-    box-shadow: 0 2px 4px var(--color-border);
-    transition: transform var(--transition-speed),
-                box-shadow var(--transition-speed);
+    border-radius: 8px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures child elements don’t overflow outside the rounded corners */
+    box-shadow: 0 2px 4px var(--color-border); /* Small shadow for the card */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Smooth hover effect */
 }
 
+/* Hover effect on project cards */
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Moves the card slightly up */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Increases shadow on hover */
 }
 
 .project-content {
-    padding: var(--spacing-medium);
+    padding: var(--spacing-medium); /* Adds padding inside the card */
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    margin-bottom: var(--spacing-small);
+    width: 100%; /* Ensures the image takes full width */
+    height: 200px; /* Fixed height for the image */
+    overflow: hidden; /* Ensures image stays within the bounds */
+    margin-bottom: var(--spacing-small); /* Adds space below the image */
 }
 
 .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-speed);
+    width: 100%; /* Ensures image fills the container */
+    height: 100%; /* Ensures image fills the container vertically */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    transition: transform var(--transition-speed); /* Smooth scale effect on hover */
 }
 
+/* Hover effect on project image */
 .project-card:hover .project-image img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom effect when hovering over the card */
 }
 
 .project-card h3 {
     color: var(--color-text);
-    margin-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing-small); /* Adds space below the title */
 }
 
 .project-description {
-    color: #666;
-    font-size: 0.95rem;
-    margin-bottom: var(--spacing-small);
+    color: #666; /* Slightly lighter text color */
+    font-size: 0.95rem; /* Smaller font size for description */
+    margin-bottom: var(--spacing-small); /* Adds space below the description */
 }
 
 .project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: var(--spacing-small);
+    display: flex; /* Flexbox layout for tech tags */
+    flex-wrap: wrap; /* Allows tags to wrap to the next line if space is needed */
+    gap: 0.5rem; /* Space between tags */
+    margin-bottom: var(--spacing-small); /* Adds space below the tech tags */
 }
 
 .project-tech span {
-    background-color: var(--color-surface);
-    color: var(--color-primary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
+    background-color: var(--color-surface); /* Background color for tech tags */
+    color: var(--color-primary); /* Text color for tech tags */
+    padding: 0.25rem 0.75rem; /* Padding inside each tag */
+    border-radius: 15px; /* Rounded corners for the tags */
+    font-size: 0.85rem; /* Slightly smaller text for tags */
 }
 
 .project-links {
-    display: flex;
-    gap: var(--spacing-small);
+    display: flex; /* Flexbox layout for project links */
+    gap: var(--spacing-small); /* Space between links */
 }
 
 .project-link {
-    text-decoration: none;
-    color: var(--color-primary);
-    font-size: 0.9rem;
-    transition: opacity var(--transition-speed);
+    text-decoration: none; /* Removes underline from links */
+    color: var(--color-primary); /* Link color */
+    font-size: 0.9rem; /* Smaller font size for links */
+    transition: opacity var(--transition-speed); /* Smooth fade effect on hover */
 }
 
+/* Hover effect on project links */
 .project-link:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Slight transparency when hovering */
 }
-
 
 /* Main Content Sections */
 main {
-    padding-top: 80px;
+    padding-top: 80px; /* Adds padding at the top to make space for the fixed navbar */
 }
 
 section {
-    padding: var(--spacing-large) var(--spacing-medium);  
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: var(--spacing-large) var(--spacing-medium);  /* Adds space around each section */
+    max-width: 1200px; /* Restricts section width */
+    margin: 0 auto; /* Centers sections */
 }
 
 /* Hero Section */
 #hero {
-    min-height: 90vh;
-    display: flex;
+    min-height: 90vh; /* Makes the hero section take up most of the viewport height */
+    display: flex; /* Flexbox for vertical and horizontal centering */
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Centers the content horizontally */
+    text-align: center; /* Centers text inside hero */
 }
 
 #hero h1 {
-    font-size: var(--font-size-xlarge);  
-    margin-bottom: var(--spacing-small);  
+    font-size: var(--font-size-xlarge);  /* Large font size for hero heading */
+    margin-bottom: var(--spacing-small);  /* Adds space below the heading */
 }
 
 /* Projects Grid */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-medium);  
-    padding: var(--spacing-medium) 0;  
+    display: grid; /* Grid layout for project cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    gap: var(--spacing-medium);  /* Adds space between grid items */
+    padding: var(--spacing-medium) 0;  /* Adds vertical padding around the grid */
 }
 
 /* Skills Container */
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-small);  
-    padding: var(--spacing-medium) 0;  
+    display: grid; /* Grid layout for skills section */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid for skills */
+    gap: var(--spacing-small);  /* Adds space between skills */
+    padding: var(--spacing-medium) 0;  /* Adds vertical padding around the skills */
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: var(--spacing-medium);  
-    background-color: var(--color-surface);  
+    text-align: center; /* Centers footer content */
+    padding: var(--spacing-medium);  /* Adds padding inside the footer */
+    background-color: var(--color-surface);  /* Background color for the footer */
 }
 
-/* Responsive Design */
+/* Responsive Design (for smaller screens like mobile) */
 @media (max-width: 768px) {
     .nav-content {
-        flex-direction: column;
-        gap: var(--spacing-small);  
+        flex-direction: column; /* Stacks navbar items vertically */
+        gap: var(--spacing-small);  /* Adds space between navbar items */
     }
 
     .nav-links {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stacks nav links vertically */
+        text-align: center; /* Centers the links */
     }
 
     #hero h1 {
-        font-size: var(--font-size-large);  
+        font-size: var(--font-size-large);  /* Makes hero heading smaller on small screens */
     }
 }
