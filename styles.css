@@ -173,126 +173,163 @@ body {
 
 /* Skills Section Layout */
 .skills-container {
+    /* Display the container as a grid, making the items responsive */
     display: grid;
+    /* Use auto-fit to automatically adjust the number of columns, with each column being at least 300px wide */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Add space between the grid items */
     gap: var(--spacing-medium);
+    /* Add padding above and below the grid */
     padding: var(--spacing-medium) 0;
 }
 
 /* Skill Category Styling */
 .skill-category {
+    /* Set the background color for each category */
     background-color: var(--color-background);
+    /* Add padding around each skill category */
     padding: var(--spacing-medium);
+    /* Round the corners of the skill category */
     border-radius: 8px;
+    /* Add a smooth transition effect when hovering over the skill category */
     transition: transform 0.3s, box-shadow 0.3s;
+    /* Set a small shadow around each skill category */
     box-shadow: var(--shadow-small);
 }
 
+/* Hover effect for Skill Category */
 .skill-category.category-hover {
+    /* When hovered, move the skill category up by 5px */
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    /* Add a larger shadow to make it look elevated */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Skill Category Heading Styling */
 .skill-category h3 {
+    /* Add spacing below the heading */
     margin-bottom: var(--spacing-medium);
+    /* Set the color for the text of the heading */
     color: var(--color-text);
 }
 
 /* Skill Items and Progress Bars */
 .skill-bar-container {
+    /* Set the layout to vertical flexbox */
     display: flex;
+    /* Arrange items vertically with some space in between */
     flex-direction: column;
     gap: var(--spacing-small);
 }
 
 .skill-item {
+    /* Set the position of the skill item relative for positioning pseudo-elements */
     position: relative;
+    /* Make sure the item takes up the full width of the container */
     width: 100%;
+    /* Add space at the top of each skill item */
     padding-top: 1.5rem;
-
 }
 
 /* Desktop Tooltip */
 @media (hover: hover) {
+    /* This pseudo-element will show the tooltip on desktop devices when hovering over a skill item */
     .skill-item::before {
+        /* Use the value of the 'data-tooltip' attribute as the content of the tooltip */
         content: attr(data-tooltip);
+        /* Position the tooltip above the skill item */
         position: absolute;
-        bottom: 100%;
-        left: 50%;
+        bottom: 100%; /* Place above the item */
+        left: 50%; /* Align horizontally in the center */
+        /* Adjust the position slightly to account for the tooltip size */
         transform: translateX(-50%) translateY(-5px);
+        /* Add padding and styling for the tooltip */
         padding: 0.5rem 1rem;
         background-color: var(--color-text);
         color: var(--color-background);
         border-radius: 4px;
         font-size: 0.875rem;
+        /* Initially hide the tooltip */
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s, transform 0.2s;
-        white-space: nowrap;
-        pointer-events: none;
-        z-index: 1000;
+        white-space: nowrap; /* Prevent the tooltip text from wrapping */
+        pointer-events: none; /* Ensure the tooltip doesn't interfere with clicks */
+        z-index: 1000; /* Make sure the tooltip is on top */
     }
 
+    /* When hovering over the skill item, show the tooltip */
     .skill-item:hover::before {
         opacity: 1;
         visibility: visible;
+        /* Move the tooltip into position */
         transform: translateX(-50%) translateY(0);
     }
 }
 
 /* Mobile Tooltip */
 @media (hover: none) {
+    /* Style for the skill description on mobile, where tooltips aren't shown on hover */
     .skill-description {
         font-size: 0.875rem;
         color: var(--color-text);
-        opacity: 0;
+        opacity: 0; /* Initially hide the description */
         margin-top: 0.25rem;
+        /* Initially position the description below the skill item */
         transform: translateY(10px);
         transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     }
 
+    /* When the skill item becomes visible, make the description appear */
     .skill-item.visible .skill-description {
         opacity: 0.8;
         transform: translateY(0);
     }
 }
 
+/* Skill Info and Percentage Styling */
 .skill-info {
+    /* Use flexbox to place skill name and percentage on opposite sides */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Space below the skill info */
 }
 
 .skill-percentage {
-    color: var(--color-primary);
-    font-weight: 500;
+    color: var(--color-primary); /* Set the color of the percentage */
+    font-weight: 500; /* Make the percentage bold */
 }
 
+/* Skill Progress Bar Styling */
 .skill-progress {
     height: 8px;
-    background-color: var(--color-surface);
-    border-radius: 4px;
-    overflow: hidden;
+    background-color: var(--color-surface); /* Background color for the progress bar */
+    border-radius: 4px; /* Round the edges of the progress bar */
+    overflow: hidden; /* Hide anything that overflows from the bar */
 }
 
 /* Skill Bar Animation */
 .skill-bar {
     height: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary); /* Color of the skill progress bar */
+    /* Initially set the progress bar to be empty */
     transform: scaleX(0);
-    transform-origin: left;
-    will-change: transform;
+    transform-origin: left; /* Make the bar grow from the left */
+    will-change: transform; /* Optimize the performance of the animation */
 }
 
+/* When the skill bar should animate, apply the 'animate' class */
 .skill-bar.animate {
-    animation: fillBar 1.5s ease-out forwards;
+    animation: fillBar 1.5s ease-out forwards; /* Animate the filling of the bar */
 }
 
+/* Keyframe animation for the skill bar filling */
 @keyframes fillBar {
     from {
-        transform: scaleX(0);
+        transform: scaleX(0); /* Start with the progress bar empty */
     }
     to {
+        /* End with the progress bar filled according to the skill level */
         transform: scaleX(var(--skill-level));
     }
 }

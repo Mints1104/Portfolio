@@ -93,31 +93,43 @@ function initializeSkillBars() {
     skillBars.forEach(bar => observer.observe(bar));
 }
 
-// Add hover effect for skill categories
+// This function initializes hover effects for skill categories.
 function initializeSkillCategories() {
+    // Select all elements with the class '.skill-category'.
     const categories = document.querySelectorAll('.skill-category');
     
+    // Loop through each category.
     categories.forEach(category => {
+        // When the user hovers over the category, add the 'category-hover' class.
         category.addEventListener('mouseenter', () => {
             category.classList.add('category-hover');
         });
         
+        // When the user stops hovering over the category, remove the 'category-hover' class.
         category.addEventListener('mouseleave', () => {
             category.classList.remove('category-hover');
         });
     });
 }
 
+// This function sets up the behavior for skill descriptions when they appear on the screen.
 function initializeSkillDescriptions() {
+    // Create an IntersectionObserver, which watches when an element enters or exits the viewport (the visible part of the page).
     const observer = new IntersectionObserver((entries) => {
+        // 'entries' contains all the observed elements. For each one, we'll check if it is visible.
         entries.forEach(entry => {
+            // If the element is visible on the screen...
             if (entry.isIntersecting) {
+                // Add the 'visible' class to the element, making it appear (for example, through animation).
                 entry.target.classList.add('visible');
+                
+                // Stop observing this element after it becomes visible (to avoid unnecessary checks).
                 observer.unobserve(entry.target);
             }
         });
     });
 
+    // Select all elements with the class '.skill-item' and observe them.
     document.querySelectorAll('.skill-item').forEach(item => {
         observer.observe(item);
     });
