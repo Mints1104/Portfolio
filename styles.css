@@ -171,6 +171,160 @@ body {
     opacity: 0.8; /* Slight transparency when hovering */
 }
 
+/* Skills Section Layout */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium) 0;
+}
+
+/* Skill Category Styling */
+.skill-category {
+    background-color: var(--color-background);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: var(--shadow-small);
+}
+
+.skill-category.category-hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.skill-category h3 {
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-text);
+}
+
+/* Skill Items and Progress Bars */
+.skill-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+.skill-item {
+    position: relative;
+    width: 100%;
+    padding-top: 1.5rem;
+
+}
+
+/* Desktop Tooltip */
+@media (hover: hover) {
+    .skill-item::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-5px);
+        padding: 0.5rem 1rem;
+        background-color: var(--color-text);
+        color: var(--color-background);
+        border-radius: 4px;
+        font-size: 0.875rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, transform 0.2s;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    .skill-item:hover::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Mobile Tooltip */
+@media (hover: none) {
+    .skill-description {
+        font-size: 0.875rem;
+        color: var(--color-text);
+        opacity: 0;
+        margin-top: 0.25rem;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+
+    .skill-item.visible .skill-description {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.skill-percentage {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.skill-progress {
+    height: 8px;
+    background-color: var(--color-surface);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Skill Bar Animation */
+.skill-bar {
+    height: 100%;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    will-change: transform;
+}
+
+.skill-bar.animate {
+    animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(var(--skill-level));
+    }
+}
+
+/* Tooltip Styling */
+.skill-item::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    padding: 0.5rem 1rem;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, transform 0.2s;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.skill-item:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+
 /* Main Content Sections */
 main {
     padding-top: 80px; /* Adds padding at the top to make space for the fixed navbar */

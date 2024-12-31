@@ -21,9 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({
                 top: finalPosition, // Scroll to the section
                 behavior: 'smooth' // Ensure smooth scrolling
+
+                
             });
         });
     });
+    initializeSkillBars();
+    initializeSkillCategories();
+    initializeSkillDescriptions();
+
+
 });
 
 // Function to highlight the active section in the navigation bar based on scroll position
@@ -54,3 +61,64 @@ function highlightActiveSection() {
 // Run the highlightActiveSection function on scroll and page load
 window.addEventListener('scroll', highlightActiveSection);
 highlightActiveSection(); // Run once on page load to highlight the section already in view
+
+function initializeSkillBars() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillBar = entry.target;
+                const level = skillBar.getAttribute('data-level');
+                
+                // Set the custom property for the animation
+                skillBar.style.setProperty('--skill-level', `${level / 100}`);
+                
+                // Add the animation class
+                skillBar.classList.add('animate');
+                
+                // Optional: Add a staggered delay for multiple bars
+                const skillItems = entry.target.closest('.skill-bar-container')
+                    .querySelectorAll('.skill-bar');
+                
+                Array.from(skillItems).forEach((bar, index) => {
+                    bar.style.animationDelay = `${index * 0.2}s`;
+                });
+
+                observer.unobserve(skillBar);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Observe all skill bars
+    const skillBars = document.querySelectorAll('.skill-bar');
+    skillBars.forEach(bar => observer.observe(bar));
+}
+
+// Add hover effect for skill categories
+function initializeSkillCategories() {
+    const categories = document.querySelectorAll('.skill-category');
+    
+    categories.forEach(category => {
+        category.addEventListener('mouseenter', () => {
+            category.classList.add('category-hover');
+        });
+        
+        category.addEventListener('mouseleave', () => {
+            category.classList.remove('category-hover');
+        });
+    });
+}
+
+function initializeSkillDescriptions() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    document.querySelectorAll('.skill-item').forEach(item => {
+        observer.observe(item);
+    });
+}
