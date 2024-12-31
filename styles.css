@@ -1,0 +1,140 @@
+/* CSS Variables (Custom Properties) */
+:root {
+    /* Colors */
+    --color-primary: #007bff;
+    --color-text: #333;
+    --color-background: #fff;
+    --color-surface: #f8f9fa;
+    --color-border: rgba(0, 0, 0, 0.1);
+    
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 5rem;
+    
+    /* Typography */
+    --font-size-normal: 1rem;
+    --font-size-large: 2rem;
+    --font-size-xlarge: 3rem;
+    
+    /* Effects */
+    --shadow-small: 0 2px 4px var(--color-border);
+    --transition-speed: 0.3s;
+}
+
+/* CSS Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* For smooth scrolling */
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);  
+    background-color: var(--color-background);  
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-background);  
+    box-shadow: var(--shadow-small);  
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-small) var(--spacing-medium);  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-medium);  
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text);  
+    transition: color var(--transition-speed);  
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);  
+}
+
+/* Main Content Sections */
+main {
+    padding-top: 80px;
+}
+
+section {
+    padding: var(--spacing-large) var(--spacing-medium);  
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+#hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: var(--font-size-xlarge);  
+    margin-bottom: var(--spacing-small);  
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-medium);  
+    padding: var(--spacing-medium) 0;  
+}
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-small);  
+    padding: var(--spacing-medium) 0;  
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--spacing-medium);  
+    background-color: var(--color-surface);  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        gap: var(--spacing-small);  
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: var(--font-size-large);  
+    }
+}
