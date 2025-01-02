@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSkillBars();
     initializeSkillCategories();
     initializeSkillDescriptions();
+    initializeThemeToggle();
+
 
 
 });
@@ -134,3 +136,55 @@ function initializeSkillDescriptions() {
         observer.observe(item);
     });
 }
+
+function initializeThemeToggle() {
+    // Find the button or element with the class "theme-toggle" on the page
+    const themeToggle = document.querySelector('.theme-toggle');
+    
+    // Function to figure out the user's preferred theme
+    // This checks if a theme was previously saved in the browser (localStorage),
+    // or defaults to the system preference if nothing is saved
+    const getPreferredTheme = () => {
+        const savedTheme = localStorage.getItem('theme'); // Get saved theme from localStorage
+        if (savedTheme) {
+            return savedTheme; // Return the saved theme if it exists
+        }
+        // If no saved theme, check system settings for dark mode preference
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    
+    // Function to apply a theme (light or dark) to the website
+    // and save the user's choice in localStorage for future visits
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme); // Apply the theme to the <html> element
+        localStorage.setItem('theme', theme); // Save the theme preference in localStorage
+    };
+    
+    // Function to switch between light and dark themes
+    const toggleTheme = () => {
+        // Get the current theme from the <html> element or assume 'light' if none is set
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        // Determine the new theme to apply: switch to 'dark' if current is 'light', and vice versa
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme); // Apply the new theme
+    };
+    
+    // Set the theme when the page loads based on saved preference or system settings
+    setTheme(getPreferredTheme());
+    
+    // Add a "click" event listener to the theme toggle button
+    // When the button is clicked, it will switch between light and dark themes
+    themeToggle.addEventListener('click', toggleTheme);
+    
+    // Optional: Automatically update the theme if the system's dark mode preference changes
+    // This only works if the user hasn't explicitly chosen a theme (no saved preference)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (!localStorage.getItem('theme')) {
+            // Apply the system's new theme preference
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+}
+
+
+
