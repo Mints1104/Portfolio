@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Harun Tontus - Computer Science Student & Aspiring Developer Portfolio" />
+    <meta name="keywords" content="Harun Tontus, Computer Science, Software Development, Portfolio" />
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Harun Tontus - Portfolio" />
+    <meta property="og:description" content="Computer Science Student & Aspiring Developer Portfolio" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>Harun Tontus - Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-content">
-        <div class="logo">Harun Tontus</div>
+        <div class="logo">Harun Tontus - Portfolio</div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -56,33 +63,40 @@
     </nav>
 
     <main>
-      <section id="hero">
+      <section id="hero" aria-label="Hero section">
         <h1>Hi, I'm Harun Tontus</h1>
         <p>Computer Science Student & Aspiring Developer</p>
       </section>
 
-      <section id="about">
+      <section id="about" aria-label="About section">
         <h2>About Me</h2>
         <p>
-          I am currently a third-year Computer Science student at Swansea
-          University, specialising in software development with a strong
-          interest in artificial intelligence. Over the past few years, I have
-          focused on Android application development, refining my skills and
-          gaining hands-on experience. Always eager to expand my knowledge, I am
-          actively exploring opportunities to grow in web and backend
-          development, and I am constantly looking for new projects to enhance
-          my expertise and contribute to innovative solutions.
+          I am a third-year Computer Science student at Swansea University with a strong focus on software development 
+          and data science. My academic achievements include a 67% average in Year 2, with exceptional performance in 
+          Data Science (94%) and Machine Learning (99%) assignments. I specialise in Android development and machine learning, 
+          with proven expertise in developing RESTful APIs, implementing machine learning models, and creating 
+          user-centric applications. My recent projects demonstrate my ability to work with modern technologies 
+          including Kotlin, Python, and various ML frameworks. I'm particularly passionate about applying machine 
+          learning solutions to real-world problems and developing scalable software applications.
         </p>
       </section>
 
-      <section id="projects">
+      <section id="projects" aria-label="Projects section">
         <h2>Projects</h2>
         <div class="project-grid">
-          <div class="project-card">
+          <article class="project-card">
             <div class="project-content">
-              <div class="project-image">
-                <img src="/images/Gamma2.0.png" alt="Gamma" />
-              </div>
+              <figure class="project-image">
+                <img 
+                  src="/images/gamma_code.png" 
+                  alt="Gamma Application showing map interface with real-time data visualization" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">Code sample for asynchronous API calls</figcaption>
+              </figure>
               <h3>Gamma</h3>
               <p class="project-description">
                 An android application developed using Kotlin and Retrofit to
@@ -108,13 +122,21 @@
                 >
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="project-card">
+          <article class="project-card">
             <div class="project-content">
-              <div class="project-image">
-                <img src="/images/PomodoroWebsite.png" alt="Project 1" />
-              </div>
+              <figure class="project-image">
+                <img 
+                  src="/images/PomodoroWebsite.png" 
+                  alt="Pomodoro Website showing timer interface and settings" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">Pomodoro timer interface</figcaption>
+              </figure>
               <h3>Pomodoro Website</h3>
               <p class="project-description">
                 A fully customisable Pomodoro Website allowing users to
@@ -138,20 +160,225 @@
                 >
               </div>
             </div>
-          </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <figure class="project-image">
+                <img 
+                  src="/images/UnityGame.png" 
+                  alt="Super Box Game gameplay screenshot showing game mechanics" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">Gameplay screenshot</figcaption>
+              </figure>
+              <h3>Super Box Game</h3>
+              <p class="project-description">
+                Engineered a dynamic 2D arcade game using Unity and C#, implementing core game mechanics, 
+                multiple levels, and responsive controls. The project demonstrates proficiency in 
+                game development principles, object-oriented programming, and real-time performance optimization. 
+                Features include multiple challenging levels, score tracking, and smooth gameplay mechanics.
+              </p>
+              <div class="project-tech">
+                <span>C#</span>
+                <span>Unity</span>
+                <span>Game Development</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  class="project-link"
+                  >View Project</a
+                >
+                <a
+                  href="#"
+                  class="project-link"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <figure class="project-image">
+                <img 
+                  src="/images/cifar100_image.png" 
+                  alt="Image recognition system showing classification results" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">ML model classification results</figcaption>
+              </figure>
+              <h3>Image Recognition System</h3>
+              <p class="project-description">
+                Developed a sophisticated image classification system using CNN and SVM on the CIFAR-100 dataset, 
+                achieving 99% accuracy. Implemented comparative analysis between different ML models, demonstrating 
+                expertise in computer vision and deep learning. The project showcases advanced data preprocessing, 
+                model optimization, and performance evaluation techniques.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>CNN</span>
+                <span>SVM</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <figure class="project-image">
+                <img 
+                  src="/images/rsz_quizapp_game.png" 
+                  alt="QuizApp showing quiz interface and leaderboard" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">Quiz application interface</figcaption>
+              </figure>
+              <h3>QuizApp</h3>
+              <p class="project-description">
+                Engineered a full-stack Android quiz application with Firebase integration, featuring secure 
+                authentication, real-time leaderboards, and categorized quizzes. Implemented efficient data 
+                structures for quiz management and user progress tracking, demonstrating strong backend 
+                development skills and database optimization.
+              </p>
+              <div class="project-tech">
+                <span>Kotlin</span>
+                <span>Firebase</span>
+                <span>Firestore</span>
+                <span>REST APIs</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <figure class="project-image">
+                <img 
+                  src="/images/Remindication_home.png" 
+                  alt="Remindication app showing medication reminder interface" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">Medication reminder interface</figcaption>
+              </figure>
+              <h3>Remindication</h3>
+              <p class="project-description">
+                Developed a comprehensive medication management Android application addressing healthcare adherence challenges. 
+                Implemented Firebase authentication, real-time data synchronization, and offline functionality. 
+                Features include customizable reminders, adherence tracking, gamification elements, and educational content. 
+                The app demonstrates expertise in mobile development, user experience design, and healthcare technology solutions.
+              </p>
+              <div class="project-tech">
+                <span>Kotlin</span>
+                <span>Firebase</span>
+                <span>Firestore</span>
+                <span>Android</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section id="skills">
+      <section id="skills" aria-label="Skills section">
         <h2>Skills & Technologies</h2>
         <div class="skills-container">
           <div class="skill-category">
-            <h3>Frontend Development</h3>
+            <h3>Programming Languages</h3>
             <div class="skill-bar-container">
-              <div
-                class="skill-item"
-                data-tooltip="Building responsive web interfaces"
-              >
+              <div class="skill-item" data-tooltip="Advanced Android development and API integration">
+                <div class="skill-info">
+                  <span>Kotlin</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="90"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Machine Learning and Data Science">
+                <div class="skill-info">
+                  <span>Python</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="85"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Backend development and Spring framework">
+                <div class="skill-info">
+                  <span>Java</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="85"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Web Development and Frontend">
+                <div class="skill-info">
+                  <span>JavaScript</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Database Management">
+                <div class="skill-info">
+                  <span>SQL (MySQL)</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Game Development">
+                <div class="skill-info">
+                  <span>C#</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="70"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Functional Programming">
+                <div class="skill-info">
+                  <span>Haskell</span>
+                  <span class="skill-percentage">65%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="65"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Web Development</h3>
+            <div class="skill-bar-container">
+              <div class="skill-item" data-tooltip="Frontend Development">
                 <div class="skill-info">
                   <span>HTML/CSS</span>
                   <span class="skill-percentage">80%</span>
@@ -159,14 +386,10 @@
                 <div class="skill-progress">
                   <div class="skill-bar" data-level="80"></div>
                 </div>
-                <div class="skill-description"></div>
               </div>
-              <div
-                class="skill-item"
-                data-tooltip="Learning modern JavaScript concepts"
-              >
+              <div class="skill-item" data-tooltip="Frontend Framework">
                 <div class="skill-info">
-                  <span>JavaScript</span>
+                  <span>React</span>
                   <span class="skill-percentage">70%</span>
                 </div>
                 <div class="skill-progress">
@@ -177,41 +400,30 @@
           </div>
 
           <div class="skill-category">
-            <h3>Backend Development</h3>
+            <h3>Data Science & ML</h3>
             <div class="skill-bar-container">
-              <div
-                class="skill-item"
-                data-tooltip="Object-oriented programming and Spring framework"
-              >
+              <div class="skill-item" data-tooltip="Deep Learning and Neural Networks">
                 <div class="skill-info">
-                  <span>Java</span>
+                  <span>TensorFlow</span>
                   <span class="skill-percentage">85%</span>
                 </div>
                 <div class="skill-progress">
                   <div class="skill-bar" data-level="85"></div>
                 </div>
               </div>
-              <!-- New Skill: SQL -->
-              <div
-                class="skill-item"
-                data-tooltip="Relational database management and SQL queries"
-              >
+              <div class="skill-item" data-tooltip="Data Analysis and Visualization">
                 <div class="skill-info">
-                  <span>SQL</span>
-                  <span class="skill-percentage">75%</span>
+                  <span>Pandas/NumPy</span>
+                  <span class="skill-percentage">80%</span>
                 </div>
                 <div class="skill-progress">
-                  <div class="skill-bar" data-level="75"></div>
+                  <div class="skill-bar" data-level="80"></div>
                 </div>
               </div>
-
-              <div
-                class="skill-item"
-                data-tooltip="Modern, concise, and safe programming language for Android development"
-              >
+              <div class="skill-item" data-tooltip="Data Visualization">
                 <div class="skill-info">
-                  <span>Kotlin</span>
-                  <span class="skill-percentage">80%</span>
+                  <span>Matplotlib/Seaborn</span>
+                  <span class="skill-percentage">75%</span>
                 </div>
                 <div class="skill-progress">
                   <div class="skill-bar" data-level="75"></div>
@@ -219,18 +431,61 @@
               </div>
             </div>
           </div>
+
+          <div class="skill-category">
+            <h3>Frameworks & Tools</h3>
+            <div class="skill-bar-container">
+              <div class="skill-item" data-tooltip="Backend Framework">
+                <div class="skill-info">
+                  <span>Spring Boot</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="80"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="API Integration">
+                <div class="skill-info">
+                  <span>Retrofit</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="85"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Cloud Services">
+                <div class="skill-info">
+                  <span>Firebase</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="80"></div>
+                </div>
+              </div>
+              <div class="skill-item" data-tooltip="Version Control">
+                <div class="skill-info">
+                  <span>Git</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-bar" data-level="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" aria-label="Contact section">
         <h2>Get In Touch</h2>
+        <p>Email: harunemretontus@hotmail.com</p>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Harun Tontus. All rights reserved.</p>
+      <p>&copy; 2025 Harun Tontus. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

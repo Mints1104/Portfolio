@@ -140,7 +140,7 @@ body {
 .project-card {
     background-color: var(--color-background);
     border-radius: 8px; /* Rounded corners for the card */
-    overflow: hidden; /* Ensures child elements don’t overflow outside the rounded corners */
+    overflow: hidden; /* Ensures child elements don't overflow outside the rounded corners */
     box-shadow: 0 2px 4px var(--color-border); /* Small shadow for the card */
     transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Smooth hover effect */
 }
@@ -156,22 +156,56 @@ body {
 }
 
 .project-image {
-    width: 100%; /* Ensures the image takes full width */
-    height: 200px; /* Fixed height for the image */
-    overflow: hidden; /* Ensures image stays within the bounds */
-    margin-bottom: var(--spacing-small); /* Adds space below the image */
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    margin-bottom: 1rem;
 }
 
 .project-image img {
-    width: 100%; /* Ensures image fills the container */
-    height: 100%; /* Ensures image fills the container vertically */
-    object-fit: cover; /* Ensures image covers the area without distortion */
-    transition: transform var(--transition-speed); /* Smooth scale effect on hover */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
 }
 
-/* Hover effect on project image */
-.project-card:hover .project-image img {
-    transform: scale(1.05); /* Slight zoom effect when hovering over the card */
+.project-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-image:hover .image-caption {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-image {
+        height: 180px;
+    }
 }
 
 .project-card h3 {
