@@ -6,20 +6,22 @@
     --color-background: #fff;
     --color-surface: #f8f9fa;
     --color-border: rgba(0, 0, 0, 0.1);
-    
+
     /* Spacing (Margins/Paddings) */
     --spacing-small: 1rem;
     --spacing-medium: 2rem;
     --spacing-large: 5rem;
-    
+
     /* Typography */
     --font-size-normal: 1rem;
     --font-size-large: 2rem;
     --font-size-xlarge: 3rem;
-    
+
     /* Effects */
-    --shadow-small: 0 2px 4px var(--color-border); /* Light shadow for depth */
-    --transition-speed: 0.3s; /* Smooth transition speed for hover effects */
+    --shadow-small: 0 2px 4px var(--color-border);
+    /* Light shadow for depth */
+    --transition-speed: 0.3s;
+    /* Smooth transition speed for hover effects */
 }
 
 
@@ -72,93 +74,124 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures consistent box-sizing for all elements */
+    box-sizing: border-box;
+    /* Ensures consistent box-sizing for all elements */
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling between anchor links */
+    scroll-behavior: smooth;
+    /* Smooth scrolling between anchor links */
 }
 
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     line-height: 1.6;
-    color: var(--color-text);  
-    background-color: var(--color-background);  
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 /* Navigation Bar */
 .navbar {
-    position: fixed; /* Keeps navbar fixed at the top of the page */
+    position: fixed;
+    /* Keeps navbar fixed at the top of the page */
     width: 100%;
     background-color: var(--color-background);
-    box-shadow: var(--shadow-small); /* Adds a shadow under the navbar */
-    z-index: 1000; /* Ensures navbar is above other content when scrolling */
+    box-shadow: var(--shadow-small);
+    /* Adds a shadow under the navbar */
+    z-index: 1000;
+    /* Ensures navbar is above other content when scrolling */
 }
 
 .nav-content {
-    max-width: 1200px; /* Restricts the width of content inside navbar */
-    margin: 0 auto; /* Centers the navbar content */
-    padding: var(--spacing-small) var(--spacing-medium);  
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space out the content in navbar */
-    align-items: center; /* Vertically centers the content */
+    max-width: 1200px;
+    /* Restricts the width of content inside navbar */
+    margin: 0 auto;
+    /* Centers the navbar content */
+    padding: var(--spacing-small) var(--spacing-medium);
+    display: flex;
+    /* Flexbox for layout */
+    justify-content: space-between;
+    /* Space out the content in navbar */
+    align-items: center;
+    /* Vertically centers the content */
 }
 
 .nav-links {
-    display: flex; /* Horizontal layout for nav links */
-    list-style: none; /* Removes default list styles */
-    gap: var(--spacing-medium);  /* Adds space between each link */
+    display: flex;
+    /* Horizontal layout for nav links */
+    list-style: none;
+    /* Removes default list styles */
+    gap: var(--spacing-medium);
+    /* Adds space between each link */
 }
 
 .nav-links a {
-    text-decoration: none; /* Removes underline from links */
-    color: var(--color-text);  
-    transition: color var(--transition-speed);  /* Smooth color change on hover */
+    text-decoration: none;
+    /* Removes underline from links */
+    color: var(--color-text);
+    transition: color var(--transition-speed);
+    /* Smooth color change on hover */
 }
 
 .nav-links a:hover {
-    color: var(--color-primary);  /* Changes color on hover */
+    color: var(--color-primary);
+    /* Changes color on hover */
 }
 
 .nav-links a.active {
-    color: var(--color-primary); /* Active link color */
+    color: var(--color-primary);
+    /* Active link color */
     position: relative;
 }
 
 .nav-links a.active::after {
-    content: ''; /* Creates a pseudo-element for the active link */
+    content: '';
+    /* Creates a pseudo-element for the active link */
     position: absolute;
     bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--color-primary); /* Underline effect for active link */
-    transition: width var(--transition-speed); /* Smooth transition for the underline */
+    background-color: var(--color-primary);
+    /* Underline effect for active link */
+    transition: width var(--transition-speed);
+    /* Smooth transition for the underline */
 }
 
 /* Project Cards */
 .project-card {
     background-color: var(--color-background);
-    border-radius: 8px; /* Rounded corners for the card */
-    overflow: hidden; /* Ensures child elements don't overflow outside the rounded corners */
-    box-shadow: 0 2px 4px var(--color-border); /* Small shadow for the card */
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Smooth hover effect */
+    border-radius: 8px;
+    /* Rounded corners for the card */
+    overflow: hidden;
+    /* Ensures child elements don't overflow outside the rounded corners */
+    box-shadow: 0 2px 4px var(--color-border);
+    /* Small shadow for the card */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    /* Smooth hover effect */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
 }
 
 /* Hover effect on project cards */
 .project-card:hover {
-    transform: translateY(-5px); /* Moves the card slightly up */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Increases shadow on hover */
+    transform: translateY(-5px);
+    /* Moves the card slightly up */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    /* Increases shadow on hover */
 }
 
 .project-content {
-    padding: var(--spacing-medium); /* Adds padding inside the card */
+    padding: var(--spacing-medium);
+    /* Adds padding inside the card */
 }
 
 .project-image {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 320px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -171,11 +204,12 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.07);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .image-caption {
@@ -198,57 +232,100 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .project-image {
-        height: 200px;
+        height: 220px;
     }
 }
 
 @media (max-width: 480px) {
     .project-image {
-        height: 180px;
+        height: 160px;
     }
 }
 
 .project-card h3 {
     color: var(--color-text);
-    margin-bottom: var(--spacing-small); /* Adds space below the title */
+    margin-bottom: var(--spacing-small);
+    /* Adds space below the title */
 }
 
 .project-description {
-    color: #666; /* Slightly lighter text color */
-    font-size: 0.95rem; /* Smaller font size for description */
-    margin-bottom: var(--spacing-small); /* Adds space below the description */
+    color: #666;
+    /* Slightly lighter text color */
+    font-size: 0.95rem;
+    /* Smaller font size for description */
+    margin-bottom: var(--spacing-small);
+    /* Adds space below the description */
 }
 
 .project-tech {
-    display: flex; /* Flexbox layout for tech tags */
-    flex-wrap: wrap; /* Allows tags to wrap to the next line if space is needed */
-    gap: 0.5rem; /* Space between tags */
-    margin-bottom: var(--spacing-small); /* Adds space below the tech tags */
+    display: flex;
+    /* Flexbox layout for tech tags */
+    flex-wrap: wrap;
+    /* Allows tags to wrap to the next line if space is needed */
+    gap: 0.5rem;
+    /* Space between tags */
+    margin-bottom: var(--spacing-small);
+    /* Adds space below the tech tags */
 }
 
 .project-tech span {
-    background-color: var(--color-surface); /* Background color for tech tags */
-    color: var(--color-primary); /* Text color for tech tags */
-    padding: 0.25rem 0.75rem; /* Padding inside each tag */
-    border-radius: 15px; /* Rounded corners for the tags */
-    font-size: 0.85rem; /* Slightly smaller text for tags */
+    background-color: var(--color-surface);
+    /* Background color for tech tags */
+    color: var(--color-primary);
+    /* Text color for tech tags */
+    padding: 0.25rem 0.75rem;
+    /* Padding inside each tag */
+    border-radius: 15px;
+    /* Rounded corners for the tags */
+    font-size: 0.85rem;
+    /* Slightly smaller text for tags */
 }
 
 .project-links {
-    display: flex; /* Flexbox layout for project links */
-    gap: var(--spacing-small); /* Space between links */
+    display: flex;
+    /* Flexbox layout for project links */
+    gap: var(--spacing-small);
+    /* Space between links */
 }
 
 .project-link {
-    text-decoration: none; /* Removes underline from links */
-    color: var(--color-primary); /* Link color */
-    font-size: 0.9rem; /* Smaller font size for links */
-    transition: opacity var(--transition-speed); /* Smooth fade effect on hover */
+    text-decoration: none;
+    /* Removes underline from links */
+    color: #fff !important;
+    /* Link color */
+    font-size: 0.9rem;
+    /* Smaller font size for links */
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+    /* Smooth fade effect on hover */
+    background: var(--color-primary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
 }
 
 /* Hover effect on project links */
 .project-link:hover {
-    opacity: 0.8; /* Slight transparency when hovering */
+    background: #005fa3;
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.project-link[style*='pointer-events: none'],
+.project-link[tabindex='-1'] {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    background: #b0b0b0 !important;
+    color: #fff !important;
+    box-shadow: none;
 }
 
 /* Skills Section Layout */
@@ -313,14 +390,17 @@ body {
 
 /* Desktop Tooltip */
 @media (hover: hover) {
+
     /* This pseudo-element will show the tooltip on desktop devices when hovering over a skill item */
     .skill-item::before {
         /* Use the value of the 'data-tooltip' attribute as the content of the tooltip */
         content: attr(data-tooltip);
         /* Position the tooltip above the skill item */
         position: absolute;
-        bottom: 100%; /* Place above the item */
-        left: 50%; /* Align horizontally in the center */
+        bottom: 100%;
+        /* Place above the item */
+        left: 50%;
+        /* Align horizontally in the center */
         /* Adjust the position slightly to account for the tooltip size */
         transform: translateX(-50%) translateY(-5px);
         /* Add padding and styling for the tooltip */
@@ -333,9 +413,12 @@ body {
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s, transform 0.2s;
-        white-space: nowrap; /* Prevent the tooltip text from wrapping */
-        pointer-events: none; /* Ensure the tooltip doesn't interfere with clicks */
-        z-index: 1000; /* Make sure the tooltip is on top */
+        white-space: nowrap;
+        /* Prevent the tooltip text from wrapping */
+        pointer-events: none;
+        /* Ensure the tooltip doesn't interfere with clicks */
+        z-index: 1000;
+        /* Make sure the tooltip is on top */
     }
 
     /* When hovering over the skill item, show the tooltip */
@@ -349,11 +432,13 @@ body {
 
 /* Mobile Tooltip */
 @media (hover: none) {
+
     /* Style for the skill description on mobile, where tooltips aren't shown on hover */
     .skill-description {
         font-size: 0.875rem;
         color: var(--color-text);
-        opacity: 0; /* Initially hide the description */
+        opacity: 0;
+        /* Initially hide the description */
         margin-top: 0.25rem;
         /* Initially position the description below the skill item */
         transform: translateY(10px);
@@ -372,42 +457,54 @@ body {
     /* Use flexbox to place skill name and percentage on opposite sides */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem; /* Space below the skill info */
+    margin-bottom: 0.5rem;
+    /* Space below the skill info */
 }
 
 .skill-percentage {
-    color: var(--color-primary); /* Set the color of the percentage */
-    font-weight: 500; /* Make the percentage bold */
+    color: var(--color-primary);
+    /* Set the color of the percentage */
+    font-weight: 500;
+    /* Make the percentage bold */
 }
 
 /* Skill Progress Bar Styling */
 .skill-progress {
     height: 8px;
-    background-color: var(--color-surface); /* Background color for the progress bar */
-    border-radius: 4px; /* Round the edges of the progress bar */
-    overflow: hidden; /* Hide anything that overflows from the bar */
+    background-color: var(--color-surface);
+    /* Background color for the progress bar */
+    border-radius: 4px;
+    /* Round the edges of the progress bar */
+    overflow: hidden;
+    /* Hide anything that overflows from the bar */
 }
 
 /* Skill Bar Animation */
 .skill-bar {
     height: 100%;
-    background-color: var(--color-primary); /* Color of the skill progress bar */
+    background-color: var(--color-primary);
+    /* Color of the skill progress bar */
     /* Initially set the progress bar to be empty */
     transform: scaleX(0);
-    transform-origin: left; /* Make the bar grow from the left */
-    will-change: transform; /* Optimize the performance of the animation */
+    transform-origin: left;
+    /* Make the bar grow from the left */
+    will-change: transform;
+    /* Optimize the performance of the animation */
 }
 
 /* When the skill bar should animate, apply the 'animate' class */
 .skill-bar.animate {
-    animation: fillBar 1.5s ease-out forwards; /* Animate the filling of the bar */
+    animation: fillBar 1.5s ease-out forwards;
+    /* Animate the filling of the bar */
 }
 
 /* Keyframe animation for the skill bar filling */
 @keyframes fillBar {
     from {
-        transform: scaleX(0); /* Start with the progress bar empty */
+        transform: scaleX(0);
+        /* Start with the progress bar empty */
     }
+
     to {
         /* End with the progress bar filled according to the skill level */
         transform: scaleX(var(--skill-level));
@@ -444,66 +541,102 @@ body {
 
 /* Main Content Sections */
 main {
-    padding-top: 80px; /* Adds padding at the top to make space for the fixed navbar */
+    padding-top: 80px;
+    /* Adds padding at the top to make space for the fixed navbar */
 }
 
 section {
-    padding: var(--spacing-large) var(--spacing-medium);  /* Adds space around each section */
-    max-width: 1200px; /* Restricts section width */
-    margin: 0 auto; /* Centers sections */
+    padding: var(--spacing-large) var(--spacing-medium);
+    /* Adds space around each section */
+    max-width: 1200px;
+    /* Restricts section width */
+    margin: 0 auto;
+    /* Centers sections */
 }
 
 /* Hero Section */
 #hero {
-    min-height: 90vh; /* Makes the hero section take up most of the viewport height */
-    display: flex; /* Flexbox for vertical and horizontal centering */
+    min-height: 90vh;
+    /* Makes the hero section take up most of the viewport height */
+    display: flex;
+    /* Flexbox for vertical and horizontal centering */
     flex-direction: column;
-    justify-content: center; /* Centers the content vertically */
-    align-items: center; /* Centers the content horizontally */
-    text-align: center; /* Centers text inside hero */
+    justify-content: center;
+    /* Centers the content vertically */
+    align-items: center;
+    /* Centers the content horizontally */
+    text-align: center;
+    /* Centers text inside hero */
 }
 
 #hero h1 {
-    font-size: var(--font-size-xlarge);  /* Large font size for hero heading */
-    margin-bottom: var(--spacing-small);  /* Adds space below the heading */
+    font-size: var(--font-size-xlarge);
+    /* Large font size for hero heading */
+    margin-bottom: var(--spacing-small);
+    /* Adds space below the heading */
 }
 
 /* Projects Grid */
 .project-grid {
-    display: grid; /* Grid layout for project cards */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
-    gap: var(--spacing-medium);  /* Adds space between grid items */
-    padding: var(--spacing-medium) 0;  /* Adds vertical padding around the grid */
+    display: grid;
+    /* Grid layout for project cards */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* Responsive grid columns */
+    gap: var(--spacing-medium);
+    /* Adds space between grid items */
+    padding: var(--spacing-medium) 0;
+    /* Adds vertical padding around the grid */
 }
 
 /* Skills Container */
 .skills-container {
-    display: grid; /* Grid layout for skills section */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid for skills */
-    gap: var(--spacing-small);  /* Adds space between skills */
-    padding: var(--spacing-medium) 0;  /* Adds vertical padding around the skills */
+    display: grid;
+    /* Grid layout for skills section */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid for skills */
+    gap: var(--spacing-small);
+    /* Adds space between skills */
+    padding: var(--spacing-medium) 0;
+    /* Adds vertical padding around the skills */
 }
 
 /* Footer */
 footer {
-    text-align: center; /* Centers footer content */
-    padding: var(--spacing-medium);  /* Adds padding inside the footer */
-    background-color: var(--color-surface);  /* Background color for the footer */
+    text-align: center;
+    /* Centers footer content */
+    padding: var(--spacing-medium);
+    /* Adds padding inside the footer */
+    background-color: var(--color-surface);
+    /* Background color for the footer */
+}
+
+/* Project tagline style */
+.project-tagline {
+    font-size: 1rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
 }
 
 /* Responsive Design (for smaller screens like mobile) */
 @media (max-width: 768px) {
     .nav-content {
-        flex-direction: column; /* Stacks navbar items vertically */
-        gap: var(--spacing-small);  /* Adds space between navbar items */
+        flex-direction: column;
+        /* Stacks navbar items vertically */
+        gap: var(--spacing-small);
+        /* Adds space between navbar items */
     }
 
     .nav-links {
-        flex-direction: column; /* Stacks nav links vertically */
-        text-align: center; /* Centers the links */
+        flex-direction: column;
+        /* Stacks nav links vertically */
+        text-align: center;
+        /* Centers the links */
     }
 
     #hero h1 {
-        font-size: var(--font-size-large);  /* Makes hero heading smaller on small screens */
+        font-size: var(--font-size-large);
+        /* Makes hero heading smaller on small screens */
     }
 }

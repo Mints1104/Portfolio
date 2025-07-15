@@ -71,22 +71,53 @@
       <section id="about" aria-label="About section">
         <h2>About Me</h2>
         <p>
-          I am a third-year Computer Science student at Swansea University with a strong focus on software development 
-          and data science. My academic achievements include a 67% average in Year 2, with exceptional performance in 
+          I am a recent graduate from Swansea University with a First Class Honours in Computer Science with a strong focus on software development 
+          and data science. I have achieved 94% in my Data Science and 99% in my Machine Learning assignments. 
           Data Science (94%) and Machine Learning (99%) assignments. I specialise in Android development and machine learning, 
           with proven expertise in developing RESTful APIs, implementing machine learning models, and creating 
           user-centric applications. My recent projects demonstrate my ability to work with modern technologies 
           including Kotlin, Python, and various ML frameworks. I'm particularly passionate about applying machine 
           learning solutions to real-world problems and developing scalable software applications.
+
         </p>
       </section>
 
       <section id="projects" aria-label="Projects section">
         <h2>Projects</h2>
         <div class="project-grid">
+          <!--
+        Project Template: Copy and fill in for new projects
+        <article class="project-card">
+          <div class="project-content">
+            <figure class="project-image">
+              <img 
+                src="/images/your_image.png" 
+                alt="Short description of project image" 
+                width="600" 
+                height="400" 
+                loading="lazy"
+                style="object-fit: cover; object-position: center;"
+              />
+              <figcaption class="image-caption">Short image caption</figcaption>
+            </figure>
+            <h3>Project Title</h3>
+            <p class="project-description">
+              Brief description of the project, main features, and technologies used.
+            </p>
+            <div class="project-tech">
+              <span>Tech1</span>
+              <span>Tech2</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link">Source Code</a>
+            </div>
+          </div>
+        </article>
+        -->
           <article class="project-card">
             <div class="project-content">
-              <figure class="project-image">
+              <figure class="project-image" aria-label="Gamma Application showing map interface with real-time data visualization">
                 <img 
                   src="/images/gamma_code.png" 
                   alt="Gamma Application showing map interface with real-time data visualization" 
@@ -99,8 +130,7 @@
               </figure>
               <h3>Gamma</h3>
               <p class="project-description">
-                An android application developed using Kotlin and Retrofit to
-                interact with external APIs. The app aggregates and organises
+                The app aggregates and organises
                 real-time map data into a user-friendly and customisable
                 interface allowing users to improve their experience.
               </p>
@@ -113,11 +143,13 @@
                 <a
                   href="https://projectgamma.grumpyclockgames.com/"
                   class="project-link"
+                  aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;"
                   >View Project</a
                 >
                 <a
                   href="https://github.com/Mints1104/Gamma-2.0"
                   class="project-link"
+                  aria-label="Source Code (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;"
                   >Source Code</a
                 >
               </div>
@@ -126,7 +158,7 @@
 
           <article class="project-card">
             <div class="project-content">
-              <figure class="project-image">
+              <figure class="project-image" aria-label="Pomodoro Website showing timer interface and settings">
                 <img 
                   src="/images/PomodoroWebsite.png" 
                   alt="Pomodoro Website showing timer interface and settings" 
@@ -151,11 +183,13 @@
                 <a
                   href="https://mints1104.github.io/PomodoroWebsite/"
                   class="project-link"
+                  aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;"
                   >View Project</a
                 >
                 <a
                   href="https://github.com/Mints1104/PomodoroWebsite"
                   class="project-link"
+                  aria-label="Source Code (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;"
                   >Source Code</a
                 >
               </div>
@@ -164,7 +198,7 @@
 
           <article class="project-card">
             <div class="project-content">
-              <figure class="project-image">
+              <figure class="project-image" aria-label="Super Box Game gameplay screenshot showing game mechanics">
                 <img 
                   src="/images/UnityGame.png" 
                   alt="Super Box Game gameplay screenshot showing game mechanics" 
@@ -177,9 +211,7 @@
               </figure>
               <h3>Super Box Game</h3>
               <p class="project-description">
-                Engineered a dynamic 2D arcade game using Unity and C#, implementing core game mechanics, 
-                multiple levels, and responsive controls. The project demonstrates proficiency in 
-                game development principles, object-oriented programming, and real-time performance optimization. 
+                Engineered a dynamic 2D arcade game using Unity and C#, implementing core game mechanics, multiple levels, and responsive controls. 
                 Features include multiple challenging levels, score tracking, and smooth gameplay mechanics.
               </p>
               <div class="project-tech">
@@ -191,11 +223,13 @@
                 <a
                   href="#"
                   class="project-link"
+                  aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;"
                   >View Project</a
                 >
                 <a
                   href="#"
                   class="project-link"
+                  aria-label="Source Code (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;"
                   >Source Code</a
                 >
               </div>
@@ -204,7 +238,7 @@
 
           <article class="project-card">
             <div class="project-content">
-              <figure class="project-image">
+              <figure class="project-image" aria-label="Image recognition system showing classification results">
                 <img 
                   src="/images/cifar100_image.png" 
                   alt="Image recognition system showing classification results" 
@@ -218,9 +252,7 @@
               <h3>Image Recognition System</h3>
               <p class="project-description">
                 Developed a sophisticated image classification system using CNN and SVM on the CIFAR-100 dataset, 
-                achieving 99% accuracy. Implemented comparative analysis between different ML models, demonstrating 
-                expertise in computer vision and deep learning. The project showcases advanced data preprocessing, 
-                model optimization, and performance evaluation techniques.
+                achieving 99% accuracy.
               </p>
               <div class="project-tech">
                 <span>Python</span>
@@ -229,15 +261,15 @@
                 <span>SVM</span>
               </div>
               <div class="project-links">
-                <a href="#" class="project-link">View Project</a>
-                <a href="#" class="project-link">Source Code</a>
+                <a href="#" class="project-link" aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">View Project</a>
+                <a href="#" class="project-link" aria-label="Source Code (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">Source Code</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-content">
-              <figure class="project-image">
+              <figure class="project-image" aria-label="QuizApp showing quiz interface and leaderboard">
                 <img 
                   src="/images/rsz_quizapp_game.png" 
                   alt="QuizApp showing quiz interface and leaderboard" 
@@ -250,10 +282,7 @@
               </figure>
               <h3>QuizApp</h3>
               <p class="project-description">
-                Engineered a full-stack Android quiz application with Firebase integration, featuring secure 
-                authentication, real-time leaderboards, and categorized quizzes. Implemented efficient data 
-                structures for quiz management and user progress tracking, demonstrating strong backend 
-                development skills and database optimization.
+                Engineered a full-stack Android quiz application with Firebase integration, featuring secure authentication, real-time leaderboards, and categorized quizzes.
               </p>
               <div class="project-tech">
                 <span>Kotlin</span>
@@ -262,15 +291,15 @@
                 <span>REST APIs</span>
               </div>
               <div class="project-links">
-                <a href="#" class="project-link">View Project</a>
-                <a href="#" class="project-link">Source Code</a>
+                <a href="#" class="project-link" aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">View Project</a>
+                <a href="#" class="project-link" aria-label="Source Code (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">Source Code</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-content">
-              <figure class="project-image">
+              <figure class="project-image" aria-label="Remindication app showing medication reminder interface">
                 <img 
                   src="/images/Remindication_home.png" 
                   alt="Remindication app showing medication reminder interface" 
@@ -284,9 +313,6 @@
               <h3>Remindication</h3>
               <p class="project-description">
                 Developed a comprehensive medication management Android application addressing healthcare adherence challenges. 
-                Implemented Firebase authentication, real-time data synchronization, and offline functionality. 
-                Features include customizable reminders, adherence tracking, gamification elements, and educational content. 
-                The app demonstrates expertise in mobile development, user experience design, and healthcare technology solutions.
               </p>
               <div class="project-tech">
                 <span>Kotlin</span>
@@ -295,8 +321,109 @@
                 <span>Android</span>
               </div>
               <div class="project-links">
-                <a href="#" class="project-link">View Project</a>
-                <a href="#" class="project-link">Source Code</a>
+                <a href="#" class="project-link" aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">View Project</a>
+                <a href="#" class="project-link" aria-label="Source Code (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <figure class="project-image" aria-label="Screenshot of Forest Fire Prediction machine learning dashboard with accuracy results">
+                <img 
+                  src="/images/forest_fire_prediction.png" 
+                  alt="Screenshot of Forest Fire Prediction machine learning dashboard with accuracy results" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">Forest Fire Prediction Project</figcaption>
+              </figure>
+              <h3>Forest Fire Prediction</h3>
+              <p class="project-description">
+                Developed a machine learning model to predict forest fires using the Random Forest Classifier. 
+                The model achieved an accuracy of 95% on the test set.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Random Forest Classifier</span>
+                <span>Scikit-learn</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">View Project</a>
+                <a href="#" class="project-link" aria-label="Source Code (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <figure class="project-image" aria-label="Media Review Platform">
+                <img 
+                  src="/images/media_review_platform_reviewExamples.png" 
+                  alt="Media Review Platform" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">Media Review Platform</figcaption>
+              </figure>
+              <h3>Media Review Platform</h3>
+              <p class="project-description">
+                The Media Review Platform is a full-stack web application designed to allow users to discover, review, and discuss various forms of media, including Games, TV Shows, Films & more. It features secure user authentication and comprehensive CRUD (Create, Read, Update, Delete) functionalities for reviews, enhanced by search and filtering capabilities.
+
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>Mongoose</span>
+                <span>JWT</span>
+                <span>React Router</span>
+                <span>React Hooks</span>
+              </div>
+              <div class="project-links">
+                <a href="https://media-review-platform.vercel.app/" class="project-link" aria-label="View Project">View Project</a>
+                <a href="https://github.com/Mints1104/Media-Review-Platform" class="project-link" aria-label="Source Code">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <figure class="project-image" aria-label="House Price Prediction Project">
+                <img 
+                  src="/images/house_price_prediction.png" 
+                  alt="House Price Prediction Project" 
+                  width="600" 
+                  height="400" 
+                  loading="lazy"
+                  style="object-fit: cover; object-position: center;"
+                />
+                <figcaption class="image-caption">House Price Prediction Project</figcaption>
+              </figure>
+              <h3>House Price Prediction</h3>
+              <p class="project-description">
+                This project is an end-to-end machine learning solution for predicting house prices using the House Prices - Advanced Regression Techniques dataset from Kaggle. It demonstrates a complete data science pipeline, from initial data understanding and preprocessing to model building, evaluation, and prediction.
+
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Scikit-learn</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+                <span>Jupyter Notebook</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View Project (Coming Soon)" title="Coming Soon" tabindex="-1" style="pointer-events: none; opacity: 0.6;">View Project</a>
+                <a href="https://github.com/Mints1104/house-price-predictor" class="project-link" aria-label="Source Code">Source Code</a>
               </div>
             </div>
           </article>
