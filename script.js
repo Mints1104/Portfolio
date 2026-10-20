@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentImages = [];
   let currentIndex = 0;
+  let lastFocused = null;
 
   const updateModalView = () => {
     if (!currentImages.length) return;
@@ -72,15 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
     currentImages = images;
     currentIndex = Math.max(0, Math.min(startIndex, images.length - 1));
     updateModalView();
+    lastFocused = document.activeElement;
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    modalClose?.focus();
   };
 
   const closeModal = () => {
     modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+    lastFocused?.focus();
   };
 
   const showPrev = () => {
@@ -107,15 +111,30 @@ document.addEventListener("DOMContentLoaded", () => {
           .filter(Boolean)
       : [];
 
-    const images = (gallery.length ? gallery : [img.src]).map((src) => ({
+    // Optional per-image captions, separated by "|"
+    const captions = card.dataset.captions
+      ? card.dataset.captions.split("|").map((s) => s.trim())
+      : [];
+
+    const images = (gallery.length ? gallery : [img.src]).map((src, i) => ({
       src,
-      caption: img.alt || card.querySelector("h3")?.textContent || "",
+      caption:
+        captions[i] || img.alt || card.querySelector("h3")?.textContent || "",
     }));
 
-    // Add click handler to image or wrapper
+    // Make the thumbnail open the gallery by click or keyboard
     const clickTarget = img.closest(".project-image-wrapper") || img;
-    clickTarget.style.cursor = "pointer";
+    const title = card.querySelector("h3")?.textContent || "project";
+    clickTarget.setAttribute("role", "button");
+    clickTarget.setAttribute("tabindex", "0");
+    clickTarget.setAttribute("aria-label", `View images of ${title}`);
     clickTarget.addEventListener("click", () => openModal(images, 0));
+    clickTarget.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openModal(images, 0);
+      }
+    });
   });
 
   modalClose?.addEventListener("click", closeModal);

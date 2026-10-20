@@ -8,6 +8,13 @@
       name="description"
       content="Harun Tontus, data scientist and software engineer. First Class BSc Computer Science, Swansea University. Projects in machine learning, data analysis and full-stack web development."
     />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Harun Tontus | Data Scientist and Software Engineer" />
+    <meta property="og:description" content="Projects in machine learning, data analysis and full-stack web development." />
+    <meta property="og:url" content="https://mints1104-portfolio.netlify.app/" />
+    <meta property="og:image" content="https://mints1104-portfolio.netlify.app/assets/MetaDataRecommender.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +34,7 @@
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
-          <a class="button button--small" href="assets/HarunTontusCVApril2026_V2.pdf" download>CV</a>
+          <a class="button button--small" href="#cv">CV</a>
         </nav>
 
         <button class="burger-menu" id="burgerMenu" aria-label="Open menu">
@@ -44,7 +51,7 @@
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <a href="assets/HarunTontusCVApril2026_V2.pdf" download>Download CV</a>
+      <a href="#cv">CV</a>
     </nav>
 
     <main id="top">
@@ -71,6 +78,7 @@
         <article
           class="project-card"
           data-images="assets/MetaDataRecommender.jpg, assets/MetaDataLineups.jpg, assets/MetaDataMeta.jpg, assets/MetaDataWinPredictor.jpg"
+          data-captions="Recommender suggesting a fifth agent on Icebox | Most common line-ups and agents on Lotus | How agent pick rates changed by month | Win predictor comparing player form with agent picks"
         >
           <div class="project-image-wrapper">
             <img
@@ -115,10 +123,12 @@
         <article
           class="project-card"
           data-images="assets/MKWorldLoungeStatsHome.png, assets/MKWorldLoungeStatsExampleStats.png, assets/MKWorldLoungeStatsLeaderboard.png"
+          data-captions="Player search | Player statistics and MMR history | Leaderboard with filters"
         >
           <div class="project-image-wrapper">
             <img
               class="project-image"
+              loading="lazy"
               src="assets/MKWorldLoungeStatsHome.png"
               alt="MKWorld Lounge Stats home page"
             />
@@ -149,6 +159,7 @@
           <div class="project-image-wrapper">
             <img
               class="project-image"
+              loading="lazy"
               src="assets/house_price_prediction.png"
               alt="House price prediction notebook output"
             />
@@ -175,6 +186,7 @@
           <div class="project-image-wrapper">
             <img
               class="project-image"
+              loading="lazy"
               src="assets/media_review_platform.png"
               alt="Media Review Platform home page"
             />
@@ -201,10 +213,12 @@
         <article
           class="project-card"
           data-images="assets/AceLangHome.png, assets/AceLang2.png, assets/AceLang3.png"
+          data-captions="Home page | About section | Contact form"
         >
           <div class="project-image-wrapper">
             <img
               class="project-image"
+              loading="lazy"
               src="assets/AceLangHome.png"
               alt="Ace Language Services website"
             />
@@ -232,10 +246,12 @@
         <article
           class="project-card"
           data-images="assets/Remindication_home.png, assets/addMedicationCombinedImage.png, assets/registrationCombinedImage.png, assets/profileTab.png"
+          data-captions="Home screen with next medication | Adding a medication in three steps | Two-step registration | Profile with adherence badges"
         >
           <div class="project-image-wrapper">
             <img
               class="project-image"
+              loading="lazy"
               src="assets/Remindication_home.png"
               alt="Remindication home screen"
             />
@@ -363,8 +379,16 @@
         </p>
         <ul class="contact-list">
           <li><span>Email</span><a href="mailto:harunemretontus@hotmail.com">harunemretontus@hotmail.com</a></li>
-          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/harun-tontus-3538161b6/" target="_blank" rel="noopener">linkedin.com/in/harun-tontus</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/harun-tontus-3538161b6/" target="_blank" rel="noopener">linkedin.com/in/harun-tontus-3538161b6</a></li>
           <li><span>GitHub</span><a href="https://github.com/Mints1104" target="_blank" rel="noopener">github.com/Mints1104</a></li>
+          <li id="cv">
+            <span>CV (PDF)</span>
+            <span class="cv-links">
+              <a href="assets/cv/Harun_Tontus_CV_Data_Scientist.pdf" target="_blank" rel="noopener">Data scientist</a>
+              <a href="assets/cv/Harun_Tontus_CV_Data_Analyst.pdf" target="_blank" rel="noopener">Data analyst</a>
+              <a href="assets/cv/Harun_Tontus_CV_Software_Engineer.pdf" target="_blank" rel="noopener">Software engineer</a>
+            </span>
+          </li>
         </ul>
       </section>
     </main>

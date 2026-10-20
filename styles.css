@@ -398,7 +398,7 @@ a:hover {
     font-size: 0.94rem;
 }
 
-.contact-list span {
+.contact-list li > span:first-child {
     color: var(--text-faint);
 }
 
@@ -644,4 +644,25 @@ a:hover {
         top: -44px;
         right: 0;
     }
+}
+
+/* Focus and CV links */
+
+a:focus-visible,
+button:focus-visible,
+.project-image-wrapper:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.cv-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+}
+
+.timeline li:last-child,
+.skills > div:last-child,
+.other-projects li:last-child {
+    border-bottom: none;
 }
