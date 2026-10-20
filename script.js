@@ -37,12 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const contactButton = document.getElementById("contact-button");
-
-  contactButton.addEventListener("click", () => {
-    window.location.href = "mailto:harunemretontus@hotmail.com";
-  });
-
   // Image modal for project previews
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("imageModalImg");

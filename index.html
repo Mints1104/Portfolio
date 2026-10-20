@@ -3,399 +3,381 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harun Tontus Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    <title>Harun Tontus | Data Scientist and Software Engineer</title>
+    <meta
+      name="description"
+      content="Harun Tontus, data scientist and software engineer. First Class BSc Computer Science, Swansea University. Projects in machine learning, data analysis and full-stack web development."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <header>
-      <h1>Harun Tontus</h1>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top">Harun Tontus</a>
 
-      <nav>
-        <ul>
-          <li><a href="#hero">Hero</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+        <nav class="site-nav" aria-label="Main">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a class="button button--small" href="assets/HarunTontusCVApril2026_V2.pdf" download>CV</a>
+        </nav>
 
-      <a id="cv-button" href="assets/HarunTontusCVApril2026_V2.pdf" download>
-        Download CV
-      </a>
-
-      <button class="burger-menu" id="burgerMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-      <div class="mobile-nav" id="mobileNav">
-        <ul>
-          <li><a href="#hero">Hero</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <button class="burger-menu" id="burgerMenu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
-    <section id="hero" class="hero">
-      <h1>Hi, I'm Harun</h1>
-      <h2>
-        Aspiring Software Engineer specialising in Web and Android Development
-      </h2>
-      <button id="contact-button">Contact me</button>
-    </section>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/HarunTontusCVApril2026_V2.pdf" download>Download CV</a>
+    </nav>
 
-    <section id="about" class="section">
-      <div class="about-card">
-        <div class="about-content">
-          <h3>About Me</h3>
-          <p>
-            I am a recent graduate from Swansea University with a First Class
-            Honours in Computer Science with a strong focus on software
-            development and data science. In my free-time I enjoy making
-            websites and mobile applications, and always keen to learn new
-            technologies.
-          </p>
+    <main id="top">
+      <section class="hero container">
+        <h1>Harun Tontus</h1>
+        <p class="hero__role">Data scientist and software engineer</p>
+        <p class="hero__summary">
+          First Class BSc Computer Science from Swansea University. Graduate of
+          the Digital Futures Frontier AI Programme, covering SQL, Python data
+          pipelines, machine learning, cloud and LLMs. I build data products and
+          full-stack web applications.
+        </p>
+        <div class="hero__links">
+          <a class="button" href="#work">View work</a>
+          <a class="button button--ghost" href="mailto:harunemretontus@hotmail.com">Email me</a>
+          <a class="text-link" href="https://github.com/Mints1104" target="_blank" rel="noopener">GitHub</a>
+          <a class="text-link" href="https://www.linkedin.com/in/harun-tontus-3538161b6/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-      </div>
+      </section>
 
-      <div class="about-card">
-        <div class="about-content">
-          <h3>Education</h3>
-          <p>First Class Honours in Computer Science from Swansea University</p>
-          <h3>Notable Achievements:</h3>
-          <div class="achievements">
-            <span class="achievement">Data Classification Assignment: 94%</span>
-            <span class="achievement"
-              >CIFAR-100 Image Recognition Assignment: 99%</span
-            >
-            <span class="achievement"
-              >94% Overall in Big Data & Machine Learning Module</span
-            >
-          </div>
-        </div>
-      </div>
+      <section id="work" class="section container">
+        <h2 class="section__title">Selected work</h2>
 
-      <div class="about-card">
-        <div class="about-content">
-          <h3>Specialisations</h3>
-          <ul>
-            <li>Web Development</li>
-            <li>Android Development</li>
-            <li>Machine Learning & Artificial Intelligence</li>
-            <li>Data Science</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="about-card">
-        <div class="about-content">
-          <h3>Technologies</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">Kotlin</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">ML Frameworks</span>
-            <span class="tech-tag">RESTful APIs</span>
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Express</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">Git</span>
-            <span class="tech-tag">Spring Boot</span>
-            <span class="tech-tag">Retrofit</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">Tensorflow</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Numpy</span>
-            <span class="tech-tag">Scikit-learn</span>
-            <span class="tech-tag">Unity</span>
-            <span class="tech-tag">C#</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="projects-container">
-        <div
+        <article
           class="project-card"
-          data-images="assets/AceLangHome.png, assets/AceLang2.png, assets/AceLang3.png"
+          data-images="assets/MetaDataRecommender.jpg, assets/MetaDataLineups.jpg, assets/MetaDataMeta.jpg, assets/MetaDataWinPredictor.jpg"
         >
-          <h3>Ace Languages Website - Client Project</h3>
           <div class="project-image-wrapper">
             <img
               class="project-image"
-              src="assets/AceLangHome.png"
-              alt="Ace Languages Website"
+              src="assets/MetaDataRecommender.jpg"
+              alt="Meta Data recommender suggesting a fifth agent on Icebox"
             />
-            <div class="project-image-badge">
-              <i class="fas fa-images"></i>
-              <span>3 images</span>
+            <span class="project-image-badge">4 images</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">2026 · Capstone, Digital Futures</p>
+            <h3>Meta Data: Valorant pro pick recommender</h3>
+            <p>
+              Given a map and the agents a team has locked in, the app suggests
+              the pick a professional team would make next. A second model tests
+              whether agent picks predict who wins a map.
+            </p>
+            <ul class="project-points">
+              <li>
+                The pros' actual fifth pick is in its top three 91.3% of the
+                time on unseen 2025 games and 87.4% on the 2026 season, against
+                77.3% and 72.1% for a most-played baseline.
+              </li>
+              <li>
+                Cleaned and joined three public datasets and scraped match dates
+                from vlr.gg, covering 3,262 professional maps.
+              </li>
+              <li>
+                Tested by date, with each test written down before it ran.
+                Found no evidence that agent picks predict the winner.
+              </li>
+            </ul>
+            <p class="project-tech">Python, pandas, scikit-learn, SHAP, Streamlit, BeautifulSoup</p>
+            <div class="project-links">
+              <a href="https://valorant-agent-predictor.streamlit.app/" target="_blank" rel="noopener">Live app</a>
+              <a href="https://github.com/Mints1104/Valorant-Agent-Predictor" target="_blank" rel="noopener">Source code</a>
+              <a href="https://github.com/Mints1104/Valorant-Agent-Predictor/blob/main/presentation/Meta_Data.pdf" target="_blank" rel="noopener">Slides</a>
             </div>
           </div>
-          <p>
-            Ace Languages is a client project that I worked on sole-handedly. I
-            built a website for a language translation and interpretation
-            company that offer services in over 150 languages across Wales.
-          </p>
+        </article>
 
-          <div class="project-links">
-            <div class="project-link">
-              <a href="https://www.acelang.com/" target="_blank"
-                >View Project</a
-              >
-            </div>
-
-            <div class="project-link">
-              <a
-                href="https://github.com/Mints1104/Ace-Lang-Website"
-                target="_blank"
-                >View Source Code</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div
+        <article
           class="project-card"
           data-images="assets/MKWorldLoungeStatsHome.png, assets/MKWorldLoungeStatsExampleStats.png, assets/MKWorldLoungeStatsLeaderboard.png"
         >
-          <h3>MKWorld Lounge Stats</h3>
           <div class="project-image-wrapper">
             <img
               class="project-image"
               src="assets/MKWorldLoungeStatsHome.png"
-              alt="MKWorld Lounge Stats"
+              alt="MKWorld Lounge Stats home page"
             />
-            <div class="project-image-badge">
-              <i class="fas fa-images"></i>
-              <span>3 images</span>
+            <span class="project-image-badge">3 images</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">2025 to present · Personal project</p>
+            <h3>MKWorld Lounge Stats</h3>
+            <p>
+              A web dashboard for Mario Kart World competitive players. Look up a
+              player's statistics and match history, browse the leaderboard, and
+              compare two players with charts.
+            </p>
+            <ul class="project-points">
+              <li>Reusable React components for leaderboards, profiles, comparison and filters.</li>
+              <li>Frontend and backend tests with Vitest across components, hooks and API validation.</li>
+              <li>Serverless API endpoints deployed on Vercel.</li>
+            </ul>
+            <p class="project-tech">React, Node.js, REST APIs, Vitest, Vercel</p>
+            <div class="project-links">
+              <a href="https://mkw-lounge-stats.vercel.app/" target="_blank" rel="noopener">Live app</a>
+              <a href="https://github.com/Mints1104/MKWLoungeStats" target="_blank" rel="noopener">Source code</a>
             </div>
           </div>
-          <p>
-            A full-stack web application for viewing and analyzing Mario Kart
-            World player statistics from the Mario Kart Central Lounge API.
-            Allows users to look up players and see detailed statistics & match
-            history, view an interactive leaderboard and offers a player
-            comparison tool with performance visualisations through charts.
-          </p>
-          <div class="project-links">
-            <div class="project-link">
-              <a href="https://mkw-lounge-stats.vercel.app/" target="_blank"
-                >View Project</a
-              >
-            </div>
-            <div class="project-link">
-              <a
-                href="https://github.com/Mints1104/MKWLoungeStats"
-                target="_blank"
-                >View Source Code</a
-              >
-            </div>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <h3>Pomodoro Website</h3>
-          <img
-            class="project-image"
-            src="assets/PomodoroWebsite.png"
-            alt="Pomodoro Website"
-          />
-          <p>
-            A simple pomodoro timer website that allows you to set a timer for
-            your work sessions and breaks. Built with React.
-          </p>
-          <div class="project-links">
-            <div class="project-link">
-              <a
-                href="https://mints1104.github.io/PomodoroReact/"
-                target="_blank"
-                >View Project</a
-              >
-            </div>
-
-            <div class="project-link">
-              <a
-                href="https://github.com/Mints1104/PomodoroReact"
-                target="_blank"
-                >View Source Code</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="project-card"
-          data-images="assets/quizapp_home.png, assets/quizapp_game.png"
-        >
-          <h3>QuizApp</h3>
+        <article class="project-card">
           <div class="project-image-wrapper">
             <img
               class="project-image"
-              src="assets/quizapp_home.png"
-              alt="QuizApp"
+              src="assets/house_price_prediction.png"
+              alt="House price prediction notebook output"
             />
-            <div class="project-image-badge">
-              <i class="fas fa-images"></i>
-              <span>2 images</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">2025 · Personal project</p>
+            <h3>House Price Predictor</h3>
+            <p>
+              An end-to-end regression pipeline on the Kaggle House Prices
+              dataset, from cleaning and feature engineering to model comparison.
+            </p>
+            <ul class="project-points">
+              <li>Imputed missing values, treated outliers, encoded categories and scaled features.</li>
+              <li>Compared Random Forest and XGBoost regressors, documented in a reproducible notebook.</li>
+            </ul>
+            <p class="project-tech">Python, pandas, NumPy, scikit-learn, XGBoost, Jupyter</p>
+            <div class="project-links">
+              <a href="https://github.com/Mints1104/house-price-predictor" target="_blank" rel="noopener">Source code</a>
             </div>
           </div>
-          <p>
-            Engineered a full-stack Android quiz application with Firebase
-            integration, featuring secure authentication, real-time
-            leaderboards, and categorized quizzes.
-          </p>
-          <div class="project-links">
-            <div class="project-link">
-              <a
-                href="https://github.com/Mints1104/MyQuizApplication"
-                target="_blank"
-                >View Source Code</a
-              >
-            </div>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <h3>Media Review Platform</h3>
-          <img
-            class="project-image"
-            src="assets/media_review_platform.png"
-            alt="Media Review Platform"
-          />
-          <p>
-            The Media Review Platform is a full-stack web application designed
-            to allow users to discover, review, and discuss various forms of
-            media, including Games, TV Shows, Films & more.
-          </p>
-          <div class="project-links">
-            <div class="project-link">
-              <a
-                href="https://github.com/Mints1104/MediaReviewPlatform"
-                target="_blank"
-                >View Source Code</a
-              >
-            </div>
-            <div class="project-link">
-              <a
-                href="https://media-review-platform.vercel.app/"
-                target="_blank"
-                >View Project</a
-              >
+        <article class="project-card">
+          <div class="project-image-wrapper">
+            <img
+              class="project-image"
+              src="assets/media_review_platform.png"
+              alt="Media Review Platform home page"
+            />
+          </div>
+          <div class="project-body">
+            <p class="project-meta">2025 · Personal project</p>
+            <h3>Media Review Platform</h3>
+            <p>
+              A full-stack site for reviewing games, TV shows and films, with
+              accounts, reviews and discussion.
+            </p>
+            <ul class="project-points">
+              <li>JWT authentication with bcrypt password hashing.</li>
+              <li>React frontend on Vercel, Express API on Render, MongoDB Atlas database.</li>
+            </ul>
+            <p class="project-tech">React, Node.js, Express, MongoDB</p>
+            <div class="project-links">
+              <a href="https://media-review-platform.vercel.app/" target="_blank" rel="noopener">Live app</a>
+              <a href="https://github.com/Mints1104/MediaReviewPlatform" target="_blank" rel="noopener">Source code</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div
+        <article
+          class="project-card"
+          data-images="assets/AceLangHome.png, assets/AceLang2.png, assets/AceLang3.png"
+        >
+          <div class="project-image-wrapper">
+            <img
+              class="project-image"
+              src="assets/AceLangHome.png"
+              alt="Ace Language Services website"
+            />
+            <span class="project-image-badge">3 images</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">2025 · Client project</p>
+            <h3>Ace Language Services website</h3>
+            <p>
+              A responsive website for a translation and interpreting company
+              based in Newport that offers over 150 languages across Wales.
+            </p>
+            <ul class="project-points">
+              <li>Built and deployed alone, including DNS setup for the client's domain.</li>
+              <li>Contact forms and on-page SEO to bring in enquiries.</li>
+            </ul>
+            <p class="project-tech">HTML, CSS, JavaScript, Netlify</p>
+            <div class="project-links">
+              <a href="https://www.acelang.com/" target="_blank" rel="noopener">Live site</a>
+              <a href="https://github.com/Mints1104/Ace-Lang-Website" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </div>
+        </article>
+
+        <article
           class="project-card"
           data-images="assets/Remindication_home.png, assets/addMedicationCombinedImage.png, assets/registrationCombinedImage.png, assets/profileTab.png"
         >
-          <h3>Remindication</h3>
           <div class="project-image-wrapper">
             <img
               class="project-image"
               src="assets/Remindication_home.png"
-              alt="Remindication"
+              alt="Remindication home screen"
             />
-            <div class="project-image-badge">
-              <i class="fas fa-images"></i>
-              <span>4 images</span>
+            <span class="project-image-badge">4 images</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">2024 to 2025 · University project</p>
+            <h3>Remindication</h3>
+            <p>
+              An Android app that reminds users to take their medication on
+              schedule.
+            </p>
+            <ul class="project-points">
+              <li>Firebase authentication and real-time sync with Firestore.</li>
+              <li>API calls through Retrofit.</li>
+            </ul>
+            <p class="project-tech">Kotlin, Firebase, Firestore, Retrofit</p>
+            <div class="project-links">
+              <a href="https://github.com/Mints1104/Remindication" target="_blank" rel="noopener">Source code</a>
             </div>
           </div>
-          <p>
-            Developed a comprehensive medication management Android application
-            addressing healthcare adherence challenges.
-          </p>
-          <div class="project-links">
-            <div class="project-link">
-              <a
-                href="https://github.com/Mints1104/Remindication"
-                target="_blank"
-                >View Source Code</a
-              >
+        </article>
+
+        <h3 class="subsection__title">Other projects</h3>
+        <ul class="other-projects">
+          <li>
+            <span class="other-projects__name">QuizApp</span>
+            <span class="other-projects__desc">Android quiz app with Firebase login, leaderboards and quiz categories. Kotlin.</span>
+            <a href="https://github.com/Mints1104/MyQuizApplication" target="_blank" rel="noopener">Source</a>
+          </li>
+          <li>
+            <span class="other-projects__name">CIFAR-100 image recognition</span>
+            <span class="other-projects__desc">Compared CNN and SVM classifiers and wrote the results as a conference-style paper. Assignment mark 99%.</span>
+          </li>
+          <li>
+            <span class="other-projects__name">Forest fire prediction</span>
+            <span class="other-projects__desc">Random Forest classifier for predicting forest fires. 95% accuracy on the test set.</span>
+          </li>
+          <li>
+            <span class="other-projects__name">Pomodoro timer</span>
+            <span class="other-projects__desc">Work and break timer built with React.</span>
+            <a href="https://mints1104.github.io/PomodoroReact/" target="_blank" rel="noopener">Live</a>
+          </li>
+          <li>
+            <span class="other-projects__name">Super Box Game</span>
+            <span class="other-projects__desc">2D arcade game with multiple levels and score tracking. Unity and C#.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="experience" class="section container">
+        <h2 class="section__title">Experience and education</h2>
+        <ol class="timeline">
+          <li>
+            <p class="timeline__date">Jul 2026 to Sep 2026</p>
+            <div>
+              <h3>Frontier AI Programme, Digital Futures</h3>
+              <p>
+                12-week full-time data and AI training. SQL and databases,
+                Python data pipelines, EDA and statistics, Tableau dashboards,
+                supervised machine learning, cloud (GCP, AWS, Docker) and LLM
+                applications. Google Cloud Generative AI Leader certified.
+              </p>
             </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <h3>Forest Fire Prediction</h3>
-          <img
-            class="project-image"
-            src="assets/forest_fire_prediction.png"
-            alt="Forest Fire Prediction"
-          />
-          <p>
-            Developed a machine learning model to predict forest fires using the
-            Random Forest Classifier. The model achieved an accuracy of 95% on
-            the test set.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <h3>House Price Prediction</h3>
-          <img
-            class="project-image"
-            src="assets/house_price_prediction.png"
-            alt="House Price Prediction"
-          />
-          <p>
-            This project is an end-to-end machine learning solution for
-            predicting house prices using the House Prices - Advanced Regression
-            Techniques dataset from Kaggle.
-          </p>
-          <div class="project-links">
-            <div class="project-link">
-              <a
-                href="https://github.com/Mints1104/house-price-predictor"
-                target="_blank"
-                >View Source Code</a
-              >
+          </li>
+          <li>
+            <p class="timeline__date">May 2025 to Aug 2025</p>
+            <div>
+              <h3>Website Designer, Ace Language Services</h3>
+              <p>
+                Designed, built and deployed the company website, and worked with
+                the client to refine features after launch.
+              </p>
             </div>
+          </li>
+          <li>
+            <p class="timeline__date">Sep 2022 to Jul 2025</p>
+            <div>
+              <h3>BSc Computer Science, Swansea University</h3>
+              <p>
+                First Class Honours. Machine Learning assignment 99%, Data
+                Science project 94%, App Development 84%, Web Service
+                Development 82%.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="skills" class="section container">
+        <h2 class="section__title">Skills</h2>
+        <dl class="skills">
+          <div>
+            <dt>Languages</dt>
+            <dd>Python, SQL, JavaScript, TypeScript, Java, Kotlin, C#</dd>
           </div>
-        </div>
+          <div>
+            <dt>Data and ML</dt>
+            <dd>pandas, NumPy, scikit-learn, XGBoost, TensorFlow, SHAP, Matplotlib, Seaborn, Jupyter</dd>
+          </div>
+          <div>
+            <dt>Analytics</dt>
+            <dd>EDA, hypothesis testing, A/B testing, Tableau, Excel, Streamlit</dd>
+          </div>
+          <div>
+            <dt>Web</dt>
+            <dd>React, Node.js, Express, Spring Boot, REST APIs, Vitest</dd>
+          </div>
+          <div>
+            <dt>Data stores</dt>
+            <dd>MySQL, MongoDB, Firebase Firestore, BigQuery</dd>
+          </div>
+          <div>
+            <dt>Cloud and tools</dt>
+            <dd>Google Cloud, AWS, Docker, Git, Vercel, Render, Netlify</dd>
+          </div>
+        </dl>
+      </section>
 
-        <div class="project-card">
-          <h3>Image Recognition System</h3>
-          <img
-            class="project-image"
-            src="assets/cifar100_image.png"
-            alt="Image Recognition System"
-          />
-          <p>
-            Developed a sophisticated image classification system using CNN and
-            SVM on the CIFAR-100 dataset, achieving 99% accuracy.
-          </p>
-        </div>
+      <section id="contact" class="section container">
+        <h2 class="section__title">Contact</h2>
+        <p class="contact__intro">
+          I am looking for graduate and junior roles in data science, data
+          analysis and software engineering.
+        </p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:harunemretontus@hotmail.com">harunemretontus@hotmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/harun-tontus-3538161b6/" target="_blank" rel="noopener">linkedin.com/in/harun-tontus</a></li>
+          <li><span>GitHub</span><a href="https://github.com/Mints1104" target="_blank" rel="noopener">github.com/Mints1104</a></li>
+        </ul>
+      </section>
+    </main>
 
-        <div class="project-card">
-          <h3>Super Box Game</h3>
-          <img
-            class="project-image"
-            src="assets/UnityGame.png"
-            alt="Super Box Game"
-          />
-          <p>
-            Engineered a dynamic 2D arcade game using Unity and C#, implementing
-            core game mechanics, multiple levels, and responsive controls.
-            Features include multiple challenging levels, score tracking, and
-            smooth gameplay mechanics.
-          </p>
-        </div>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Harun Tontus</p>
+        <p class="site-footer__note">
+          Meta Data screenshots use assets owned by Riot Games. Riot Games does
+          not endorse or sponsor this project.
+        </p>
       </div>
-    </section>
+    </footer>
 
     <div class="image-modal" id="imageModal" aria-hidden="true">
       <div class="image-modal__overlay" id="imageModalOverlay"></div>
@@ -405,27 +387,9 @@
         aria-modal="true"
         aria-label="Project image preview"
       >
-        <button
-          class="image-modal__close"
-          id="imageModalClose"
-          aria-label="Close image preview"
-        >
-          ×
-        </button>
-        <button
-          class="image-modal__arrow image-modal__arrow--left"
-          id="imageModalPrev"
-          aria-label="Previous image"
-        >
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button
-          class="image-modal__arrow image-modal__arrow--right"
-          id="imageModalNext"
-          aria-label="Next image"
-        >
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        <button class="image-modal__close" id="imageModalClose" aria-label="Close image preview">×</button>
+        <button class="image-modal__arrow image-modal__arrow--left" id="imageModalPrev" aria-label="Previous image">‹</button>
+        <button class="image-modal__arrow image-modal__arrow--right" id="imageModalNext" aria-label="Next image">›</button>
         <div class="image-modal__content">
           <img id="imageModalImg" alt="" />
         </div>
@@ -435,51 +399,6 @@
         </div>
       </div>
     </div>
-
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <div class="contact-container">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-content">
-            <h3>Email</h3>
-            <a href="mailto:harunemretontus@hotmail.com"
-              >harunemretontus@hotmail.com</a
-            >
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fab fa-linkedin"></i>
-          </div>
-          <div class="contact-content">
-            <h3>LinkedIn</h3>
-            <a
-              href="https://www.linkedin.com/in/harun-tontus-3538161b6/"
-              target="_blank"
-              >Harun Tontus</a
-            >
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="contact-content">
-            <h3>GitHub</h3>
-            <a href="https://github.com/Mints1104" target="_blank">Mints1104</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>© 2025 Harun Tontus</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>
