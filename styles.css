@@ -27,7 +27,7 @@ html {
     --bg-subtle: #f6f6f5;
     --text: #141414;
     --text-muted: #5c5c5c;
-    --text-faint: #8a8a8a;
+    --text-faint: #6e6e6e;
     --line: #e5e5e3;
     --accent: #2b50aa;
     --accent-hover: #1e3c85;
@@ -350,6 +350,11 @@ a:hover {
 
 .other-projects__desc {
     color: var(--text-muted);
+}
+
+.other-projects__links {
+    display: flex;
+    gap: 14px;
 }
 
 /* Timeline */
