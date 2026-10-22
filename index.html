@@ -122,6 +122,52 @@
 
         <article
           class="project-card"
+          data-images="assets/PCADGuideQuestion.jpg, assets/PCADGuideNotebook.jpg, assets/PCADGuideNotebooks.jpg, assets/PCADGuideDecisionMap.jpg"
+          data-captions="Practice question: the answer is checked and every wrong option is explained | Notebook task: pandas runs in the browser and the answer is checked | The 12 notebooks, from warm-ups to a capstone | Decision map: a few questions lead to the method the syllabus expects"
+        >
+          <div class="project-image-wrapper">
+            <img
+              class="project-image"
+              loading="lazy"
+              src="assets/PCADGuideQuestion.jpg"
+              alt="PCAD Guide practice question with the answer explained"
+            />
+            <span class="project-image-badge">4 images</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">2026 · Personal project</p>
+            <h3>PCAD Guide: exam practice app</h3>
+            <p>
+              A study app for the Python Institute data analyst exam (PCAD), with
+              practice tests, a revision guide and coding notebooks that run
+              Python in the browser.
+            </p>
+            <ul class="project-points">
+              <li>
+                421 practice questions across the five syllabus blocks. Every
+                code answer was checked by running the code, and every wrong
+                option has a written reason.
+              </li>
+              <li>
+                12 notebooks with 69 tasks run pandas, NumPy and scikit-learn in
+                the browser through Pyodide and check each answer automatically.
+              </li>
+              <li>
+                Verification scripts test the questions and notebooks; a GitHub
+                Actions workflow builds, validates and deploys the site on every
+                push.
+              </li>
+            </ul>
+            <ul class="project-tech" aria-label="Technologies"><li>Python</li><li>pandas</li><li>SQL</li><li>JavaScript</li><li>Preact</li><li>Pyodide</li><li>GitHub Actions</li></ul>
+            <div class="project-links">
+              <a href="https://mints1104.github.io/PCAD-Guide/" target="_blank" rel="noopener">Live app</a>
+              <a href="https://github.com/Mints1104/PCAD-Guide" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="project-card"
           data-images="assets/MKWorldLoungeStatsPlayer.png, assets/MKWorldLoungeStatsHome.png, assets/MKWorldLoungeStatsLeaderboard.png"
           data-captions="Player statistics, MMR history, score distribution and recent events | Player search | Leaderboard with filters"
         >
@@ -276,14 +322,6 @@
 
         <h3 class="subsection__title">Other projects</h3>
         <ul class="other-projects">
-          <li>
-            <span class="other-projects__name">PCAD Guide</span>
-            <span class="other-projects__desc">Practice tests, mock exams and a revision guide for the Python Institute PCAD data analyst exam. JavaScript and Python.</span>
-            <span class="other-projects__links">
-              <a href="https://mints1104.github.io/PCAD-Guide/" target="_blank" rel="noopener">Live</a>
-              <a href="https://github.com/Mints1104/PCAD-Guide" target="_blank" rel="noopener">Source</a>
-            </span>
-          </li>
           <li>
             <span class="other-projects__name">QuizApp</span>
             <span class="other-projects__desc">Android quiz app with Firebase login, leaderboards and quiz categories. Kotlin.</span>

@@ -351,12 +351,6 @@ a:hover {
 .other-projects__desc {
     color: var(--text-muted);
 }
-
-.other-projects__links {
-    display: flex;
-    gap: 14px;
-}
-
 /* Timeline */
 
 .timeline {
